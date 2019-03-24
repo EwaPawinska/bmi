@@ -29,7 +29,7 @@ public class BMICalculator implements Calculate {
         BMI = (int)(100 * BMI);
         BMI = BMI / 100.00;
 
-        int index = Arrays.binarySearch(table,BMI);
+        int index = Math.abs(Arrays.binarySearch(table,BMI)) - 1;
         System.out.println(BMI);
         System.out.println("index is: " + index);
         switch(index){
